@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@import "@fontsource/source-serif-4/400.css";
+@import "@fontsource/source-serif-4/500.css";
+@import "@fontsource/source-serif-4/600.css";
+@import "@fontsource/source-serif-4/400-italic.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/300.css";
+
+@theme {
+  --color-ink: #f2ede6;
+  --color-ink-dim: #b9b0a4;
+  --color-ink-faint: #7d7468;
+
+  --color-ground: #0f1130;
+  --color-ground-raised: #191c42;
+
+  --color-clay: #d97757;
+  --color-clay-dim: #a85f45;
+
+  --color-gold: #dbb04a;
+  --color-rose: #e0879a;
+
+  --color-hairline: rgb(242 237 230 / 12%);
+  --color-hairline-strong: rgb(242 237 230 / 22%);
+
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-ground);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-clay-dim);
+  color: var(--color-ink);
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4.2);
+    opacity: 0;
+  }
+}
+
+@keyframes dash-drift {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
