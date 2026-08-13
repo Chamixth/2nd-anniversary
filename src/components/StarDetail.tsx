@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { site, type WorldStar } from "../content"
 import { displayBody, displayDate, displayLabel, isTodo } from "../lib/placeholder"
+import { assetUrl } from "../lib/assetUrl"
 import StarIcon from "./StarIcon"
 import InstagramDM from "./InstagramDM"
 import FandomNotes from "./FandomNotes"
@@ -63,7 +64,7 @@ export default function StarDetail({ star, onClose }: StarDetailProps) {
             {star.scene === "hogwarts" ? (
               <HogwartsScene />
             ) : star.scene === "photo" && star.bannerPhoto ? (
-              <img src={star.bannerPhoto} alt="" className="block max-h-72 w-full object-cover" />
+              <img src={assetUrl(star.bannerPhoto)} alt="" className="block max-h-72 w-full object-cover" />
             ) : (
               <div className="h-[4px] w-full" style={{ background: ACCENT[star.kind] }} />
             )}
@@ -106,7 +107,7 @@ export default function StarDetail({ star, onClose }: StarDetailProps) {
               )}
               {star.notes && <FandomNotes notes={star.notes} />}
               {star.photo && (
-                <img src={star.photo} alt={label} className="mt-6 w-full border border-hairline sm:mt-8" />
+                <img src={assetUrl(star.photo)} alt={label} className="mt-6 w-full border border-hairline sm:mt-8" />
               )}
             </div>
           </motion.div>
