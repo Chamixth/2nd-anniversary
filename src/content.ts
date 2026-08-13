@@ -15,7 +15,7 @@ export const site = {
   /** Displayed on the lock screen and letter star. */
   anniversaryDate: "August 14",
   /** Optional — shown on the lock screen if the password isn't obvious. Leave blank to omit. */
-  passwordHint: "",
+  passwordHint: "the song I listened to before I asked you out",
   /** Shown one at a time, right after unlock, before the world opens. Keep it short — 3-4 lines reads best. */
   arrivalLines: ["for two years now, it's been you.", "i built you a small universe to wander in.", "follow the light."],
 }
